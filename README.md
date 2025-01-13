@@ -19,8 +19,8 @@ Working knowledge in the following topics:
 - Containers
   - https://www.youtube.com/watch?v=SnSH8Ht3MIc
   - https://www.mankier.com/5/Containerfile
-- rpm-ostree
-  - https://coreos.github.io/rpm-ostree/container/
+- bootc
+  - https://containers.github.io/bootc/
 - Fedora Silverblue (and other Fedora Atomic variants)
   - https://docs.fedoraproject.org/en-US/fedora-silverblue/
 - Github Workflows
@@ -38,6 +38,12 @@ This file defines the operations used to customize the selected image. It contai
 - change the upstream from which the custom image is derived
 - add additional RPM packages
 - add binaries as a layer from other images
+
+## Building an ISO
+
+Modify `iso.toml` to point to your custom image before generating an ISO.
+
+- (Steps in progress)
 
 ## Workflows
 
@@ -78,4 +84,15 @@ This provides users a method of verifying the image.
     gh secret set SIGNING_SECRET < cosign.key
     ```
 
-4. Commit the `cosign.pub` file into your git repository
+4. Commit the `cosign.pub` file to the root of your git repository.
+
+# Community
+
+- [**bootc discussion forums**](https://github.com/containers/bootc/discussions) - Nothing in this template is ublue specific, the upstream bootc project has a discussions forum where custom image builders can hang out and ask questions.
+- Index your image on [artifacthub.io](https://artifacthub.io), use the `artifacthub-repo.yml` file at the root to verify yourself as the publisher. 
+
+## Community Examples
+
+- [m2os](https://github.com/m2giles/m2os)
+- [bos](https://github.com/bsherman/bos)
+- [homer](https://github.com/bketelsen/homer/)

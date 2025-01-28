@@ -10,7 +10,7 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install screen fastfetch rclone
+rpm-ostree install screen fastfetch rclone waypipe
 rpm-ostree install cockpit-system cockpit-ostree cockpit-podman cockpit-networkmanager cockpit-packagekit cockpit-storaged cockpit-kdump cockpit-selinux cockpit-sosreport cockpit-system
 
 # this would install a package from rpmfusion
